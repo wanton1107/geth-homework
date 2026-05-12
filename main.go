@@ -19,6 +19,13 @@ var urls = []string{
 	"https://eth-sepolia-testnet.api.pocket.network",
 }
 
+const (
+	MENU_SEARCH_BLOCK = 1
+	MENU_TRANSFER     = 2
+	MENU_CONTRACT     = 3
+	MENU_EXIT         = 4
+)
+
 func main() {
 	// 仅用于初次连接各 RPC；连接完成后应 cancel，避免把短生命周期 context 绑在整个 App 上。
 	app, err := common.NewApp(urls)
@@ -27,7 +34,8 @@ func main() {
 	}
 	for {
 		menu := app.Menu()
-		if menu == 1 {
+		if menu == MENU_SEARCH_BLOCK {
+			// 根据区块高度获取区块信息
 			blockNumber, err := app.InputBlockNumber()
 			if err != nil {
 				log.Fatal(err)
@@ -42,20 +50,23 @@ func main() {
 			fmt.Printf("\nblock time: %+v\n", time.Unix(int64(block.Time()), 0).Format("2006-01-02 15:04:05"))
 			fmt.Printf("\nblock gas limit: %+v\n", block.GasLimit())
 			fmt.Printf("\nblock gas used: %+v\n", block.GasUsed())
-		} else if menu == 2 {
+		} else if menu == MENU_TRANSFER {
+			// 向指定地址转账
 			privateKeyHex, toAddressHex, amountETHStr := app.InputTransferInfo()
 			err := app.Transfer(privateKeyHex, toAddressHex, amountETHStr)
 			if err != nil {
 				log.Fatal(err)
 			}
-		} else if menu == 3 {
+		} else if menu == MENU_CONTRACT {
+			// 与指定ERC20合约交互
 			contractAddressHex := app.InputContractAddress()
 			operation := app.InputContractOperation()
 			err := app.Contract(contractAddressHex, operation)
 			if err != nil {
 				log.Fatal(err)
 			}
-		} else if menu == 4 {
+		} else if menu == MENU_EXIT {
+			// 退出
 			break
 		}
 	}
