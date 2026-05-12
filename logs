@@ -1,0 +1,22 @@
+GOROOT=/Users/wanton/Development/GoPath/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.7.darwin-amd64 #gosetup
+GOPATH=/Users/wanton/Development/GoPath #gosetup
+/Users/wanton/Development/GoPath/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.7.darwin-amd64/bin/go build -o /Users/wanton/Library/Caches/JetBrains/GoLand2025.1/tmp/GoLand/___go_build_awesomeProject awesomeProject #gosetup
+/Users/wanton/Library/Caches/JetBrains/GoLand2025.1/tmp/GoLand/___go_build_awesomeProject #gosetup
+2026/05/03 12:40:07 Subscribed to logs of contract 0x610178dA211FEF7D417bC0e6FeD39F05609AD788 via ws://127.0.0.1:8545
+2026/05/03 12:40:17 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2026/05/03 12:40:17 [2026-05-03T12:40:17+08:00] Event: Transfer
+2026/05/03 12:40:17   Block Number: 14
+2026/05/03 12:40:17   Tx Hash     : 0x22b5afcd1c4c8e3bd468e318c52a684d15675699f9bc71c0ad5b78a71ee9e14a
+2026/05/03 12:40:17   Log Index   : 0
+2026/05/03 12:40:17   Contract    : 0x610178dA211FEF7D417bC0e6FeD39F05609AD788
+2026/05/03 12:40:17   Topics Count: 3
+2026/05/03 12:40:17 Indexed Parameters (from Topics):
+2026/05/03 12:40:17 [1] from (address):
+2026/05/03 12:40:17 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+2026/05/03 12:40:17 [2] to (address):
+2026/05/03 12:40:17 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+2026/05/03 12:40:17 Non-indexed Parameters (from Data):
+2026/05/03 12:40:17 [3] value (uint256):
+2026/05/03 12:40:17 1000000
+2026/05/03 12:40:17 -----------------------------------------
+

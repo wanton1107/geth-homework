@@ -1,0 +1,41 @@
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Go：编译产物与测试缓存
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+coverage.out
+coverage.html
+*.coverprofile
+cpu.prof
+mem.prof
+
+# 常见根目录可执行文件名（go build 默认）
+/main
+/awesomeProject
+
+# 环境变量与密钥（勿提交）
+.env
+.env.*
+!.env.example
+
+# 运行日志（项目根目录已有 logs）
+logs
+logs/
+*.log
+
+# delve / 调试
+__debug_bin
+__debug_bin*
